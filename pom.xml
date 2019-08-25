@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -14,8 +13,9 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <blade-mvc.version>2.0.14.RELEASE</blade-mvc.version>
   </properties>
 
   <dependencies>
@@ -28,7 +28,7 @@
     <dependency>
       <groupId>com.bladejava</groupId>
       <artifactId>blade-mvc</artifactId>
-      <version>2.0.15.ALPHA</version>
+      <version>${blade-mvc.version}</version>
     </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>
@@ -44,6 +44,12 @@
       <groupId>io.github.biezhi</groupId>
       <artifactId>anima</artifactId>
       <version>0.2.6</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>blade-asm</artifactId>
+          <groupId>com.bladejava</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.postgresql</groupId>
@@ -54,6 +60,24 @@
       <groupId>org.xerial</groupId>
       <artifactId>sqlite-jdbc</artifactId>
       <version>3.28.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <version>1.4.197</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.ant</groupId>
+      <artifactId>ant</artifactId>
+      <version>1.10.5</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.zaxxer</groupId>
+      <artifactId>HikariCP</artifactId>
+      <version>3.3.1</version>
     </dependency>
   </dependencies>
 
