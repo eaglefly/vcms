@@ -41,10 +41,10 @@ public class Bootstrap implements BladeLoader {
         ds.setUsername("sa");
         ds.setPassword("");
         ds.setConnectionTestQuery("select 1 from dual");
-        Anima.open(ds);
+//        Anima.open(ds);
 
-//        String DB_PATH = Const.CLASSPATH  + "vcms.db";
-//        Anima.open("jdbc:sqlite:" + DB_PATH);
+        String DB_PATH = Const.CLASSPATH  + "vcms.db";
+        Anima.open("jdbc:sqlite:" + DB_PATH);
 
 
     }
